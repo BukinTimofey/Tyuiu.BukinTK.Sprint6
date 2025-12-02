@@ -1,17 +1,14 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace Tyuiu.BukinTK.Sprint6.Task0.V14
+﻿namespace Tyuiu.BukinTK.Sprint6.Task0.V14
 {
     partial class FormMain
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -26,8 +23,8 @@ namespace Tyuiu.BukinTK.Sprint6.Task0.V14
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -172,4 +169,3 @@ namespace Tyuiu.BukinTK.Sprint6.Task0.V14
         private GroupBox groupBoxOutput_BTK;
     }
 }
-
