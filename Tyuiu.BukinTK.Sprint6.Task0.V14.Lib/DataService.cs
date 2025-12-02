@@ -6,7 +6,7 @@ namespace Tyuiu.BukinTK.Sprint6.Task0.V14.Lib
     {
         public double Calculate(int x)
         {
-            return Math.Round(Math.Pow(1-x, 2) / (-3 * x), 3);
+            return Math.Round(Math.Pow(1 - x, 2) / (-3 * x), 3);
         }
     }
 }

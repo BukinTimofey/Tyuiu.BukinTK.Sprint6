@@ -8,8 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.BukinTK.Sprint6.Task0.V14.Lib\Tyuiu.BukinTK.Sprint6.Task0.V14.Lib.csproj" />
-  </ItemGroup>
-
 </Project>
