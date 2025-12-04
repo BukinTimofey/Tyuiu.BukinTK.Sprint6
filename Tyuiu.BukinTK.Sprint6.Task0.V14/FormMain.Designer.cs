@@ -49,7 +49,7 @@
             labelFormula_BTK.Location = new Point(7, 19);
             labelFormula_BTK.Margin = new Padding(4, 0, 4, 0);
             labelFormula_BTK.Name = "labelFormula_BTK";
-            labelFormula_BTK.Size = new Size(147, 20);
+            labelFormula_BTK.Size = new Size(140, 20);
             labelFormula_BTK.TabIndex = 1;
             labelFormula_BTK.Text = "y(x) = (1-x)^2 / (-3x)";
             labelFormula_BTK.Click += labelFormula_Click;
@@ -135,7 +135,7 @@
             groupBoxOutput_BTK.TabStop = false;
             groupBoxOutput_BTK.Text = "Вывод данных";
             // 
-            // FormMain_BTK
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -145,8 +145,9 @@
             Controls.Add(groupBoxInput_BTK);
             Controls.Add(groupBoxCondition_BTK);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "FormMain_BTK";
+            Name = "FormMain";
             Text = "Спринт 6 | Таск 0 | Вариант 14 | Букин Т. К. ";
+            Load += FormMain_Load;
             groupBoxCondition_BTK.ResumeLayout(false);
             groupBoxCondition_BTK.PerformLayout();
             groupBoxInput_BTK.ResumeLayout(false);

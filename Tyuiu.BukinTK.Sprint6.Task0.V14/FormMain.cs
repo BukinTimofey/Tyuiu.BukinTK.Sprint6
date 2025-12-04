@@ -29,5 +29,10 @@ namespace Tyuiu.BukinTK.Sprint6.Task0.V14
         {
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
