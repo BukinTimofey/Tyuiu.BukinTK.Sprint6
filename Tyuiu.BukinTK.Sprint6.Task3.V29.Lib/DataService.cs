@@ -6,20 +6,19 @@ namespace Tyuiu.BukinTK.Sprint6.Task3.V29.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            for (int i = 0; i < matrix.GetLength(0) - 1; i++)
+            int rows = matrix.GetLength(0);
+            int[] column5 = new int[rows];
+
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < matrix.GetLength(0) - i - 1; j++)
-                {
-                    if (matrix[j, 4] > matrix[j + 1, 4])
-                    {
-                        for (int k = 0; k < matrix.GetLength(1); k++)
-                        {
-                            int temp = matrix[j, k];
-                            matrix[j, k] = matrix[j + 1, k];
-                            matrix[j + 1, k] = temp;
-                        }
-                    }
-                }
+                column5[i] = matrix[i, 4];
+            }
+
+            Array.Sort(column5);
+
+            for (int i = 0; i < rows; i++)
+            {
+                matrix[i, 4] = column5[i];
             }
             return matrix;
         }
