@@ -36,7 +36,7 @@ namespace Tyuiu.BukinTK.Sprint6.Task2.V17
 
         private void buttonHelp_BTK_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ИСПБ-25-1 беббе");
+            MessageBox.Show("Таск 2 выполнил Букин Тимофей Константинович ИСПБ-25-1");
         }
     }
 }
