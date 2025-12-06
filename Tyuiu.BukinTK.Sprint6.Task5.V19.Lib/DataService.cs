@@ -13,7 +13,7 @@ namespace Tyuiu.BukinTK.Sprint6.Task5.V19.Lib
 
             foreach (var line in File.ReadLines(path))
             {
-                if (double.TryParse(line, out double value))
+                if (double.TryParse(line, out double value) && value == Math.Round(value))
                 {
                     numbers.Add(Math.Round(value, 3));
                 }
