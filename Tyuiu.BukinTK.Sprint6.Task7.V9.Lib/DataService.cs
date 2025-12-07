@@ -28,13 +28,13 @@ namespace Tyuiu.BukinTK.Sprint6.Task7.V9.Lib
             int rows = data.GetLength(0);
             int cols = data.GetLength(1);
 
-            if (cols < 3)
+            if (cols < 4)
             {
                 return (int[,])data.Clone();
             }
 
             int[,] result = (int[,])data.Clone();
-            int targetColumn = 2;
+            int targetColumn = 3;
 
             for (int i = 0; i < rows; i++)
             {
