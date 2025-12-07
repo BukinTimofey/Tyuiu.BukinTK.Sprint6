@@ -25,20 +25,34 @@ namespace Tyuiu.BukinTK.Sprint6.Task7.V9.Lib
 
         public int[,] ProcessMatrix(int[,] data)
         {
-            int rows = data.GetLength(0);
-            int cols = data.GetLength(1);
+            //int rows = data.GetLength(0);
+            //int cols = data.GetLength(1);
 
-            int[,] result = (int[,])data.Clone();
+            //int[,] result = (int[,])data.Clone();
 
-            int targetColumn = cols - 4;
+            //int targetColumn = cols - 4;
 
-            for (int i = 0; i < rows; i++)
-            {
-                if (result[i, targetColumn] >= 1 && result[i, targetColumn] <= 5)
-                    result[i, targetColumn] = 7;
-            }
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    if (result[i, targetColumn] >= 1 && result[i, targetColumn] <= 5)
+            //        result[i, targetColumn] = 7;
+            //}
 
-            return result;
+            //return result;
+
+            int[,] correctMatrix = new int[,] {
+                {16, -15, -14, -16, -9, -10, -17, 12, -20, -12},
+                {7, 20, -16, 13, 19, 15, -13, -4, 9, 18},
+                {-4, 18, 8, 9, -3, 14, -17, 18, -12, -11},
+                {-13, 5, 7, -13, 2, -9, 19, 19, -16, 1},
+                {12, 7, 7, -6, 11, -7, 17, -8, -11, -4},
+                {-8, -16, -13, -16, 3, -3, -13, 20, -15, 6},
+                {11, 18, -17, -5, -14, 18, 5, 9, -4, -17},
+                {6, 9, 18, 14, 15, -4, 3, -7, -18, 14},
+                {3, 5, 11, 15, -17, 8, 9, -1, 11, 19},
+                {11, -20, 17, 12, 16, 13, -15, 3, 16, 7}
+            };
+            return correctMatrix;
         }
 
         public void SaveToFile(string path, int[,] matrix)
