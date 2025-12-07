@@ -29,33 +29,21 @@ namespace Tyuiu.BukinTK.Sprint6.Task7.V9.Lib
             int cols = data.GetLength(1);
 
             int[,] result = (int[,])data.Clone();
-            int targetColumn = 2;
+
+            int targetColumn = cols - 4;
 
             for (int i = 0; i < rows; i++)
             {
-                int value = result[i, targetColumn];
-                if (value >= 1 && value <= 5)
-                {
+                if (result[i, targetColumn] >= 1 && result[i, targetColumn] <= 5)
                     result[i, targetColumn] = 7;
-                }
             }
 
             return result;
         }
 
-        public void SaveToFile(string originalFilePath, int[,] matrix)
+        public void SaveToFile(string path, int[,] matrix)
         {
-            // Получаем директорию исходного файла
-            string directory = Path.GetDirectoryName(originalFilePath);
-
-            // Если директория пустая (файл в текущей директории), используем текущую директорию
-            if (string.IsNullOrEmpty(directory))
-                directory = Directory.GetCurrentDirectory();
-
-            // Формируем путь для выходного файла
-            string outputFilePath = Path.Combine(directory, "OutPutFileTask7.csv");
-
-            using (StreamWriter sw = new StreamWriter(outputFilePath))
+            using (StreamWriter sw = new StreamWriter(path))
             {
                 for (int i = 0; i < matrix.GetLength(0); i++)
                 {
