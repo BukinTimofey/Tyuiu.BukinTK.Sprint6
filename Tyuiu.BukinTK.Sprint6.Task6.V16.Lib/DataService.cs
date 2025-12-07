@@ -16,14 +16,13 @@ namespace Tyuiu.BukinTK.Sprint6.Task6.V16.Lib
                 }
 
                 string text = File.ReadAllText(path);
-
-                char[] separators = new char[] { ' ', '\t', '\n', '\r', '.', ',', '!', '?', ';', ':' };
+                char[] separators = new char[] { ' ', '\t', '\n', '\r', '.', ',', '!', '?', ';', ':', '"', '(', ')', '[', ']', '{', '}' };
                 string[] words = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                 List<string> wordsWithB = new List<string>();
 
                 foreach (string word in words)
                 {
-                    if (word.IndexOf('b', StringComparison.OrdinalIgnoreCase) >= 0)
+                    if (word.Contains('b'))
                     {
                         wordsWithB.Add(word);
                     }
