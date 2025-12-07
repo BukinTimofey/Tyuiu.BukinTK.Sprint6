@@ -28,11 +28,6 @@ namespace Tyuiu.BukinTK.Sprint6.Task7.V9.Lib
             int rows = data.GetLength(0);
             int cols = data.GetLength(1);
 
-            if (cols < 3)
-            {
-                return (int[,])data.Clone();
-            }
-
             int[,] result = (int[,])data.Clone();
             int targetColumn = 2;
 
@@ -48,9 +43,19 @@ namespace Tyuiu.BukinTK.Sprint6.Task7.V9.Lib
             return result;
         }
 
-        public void SaveToFile(string path, int[,] matrix)
+        public void SaveToFile(string originalFilePath, int[,] matrix)
         {
-            using (StreamWriter sw = new StreamWriter(path))
+            // Получаем директорию исходного файла
+            string directory = Path.GetDirectoryName(originalFilePath);
+
+            // Если директория пустая (файл в текущей директории), используем текущую директорию
+            if (string.IsNullOrEmpty(directory))
+                directory = Directory.GetCurrentDirectory();
+
+            // Формируем путь для выходного файла
+            string outputFilePath = Path.Combine(directory, "OutPutFileTask7.csv");
+
+            using (StreamWriter sw = new StreamWriter(outputFilePath))
             {
                 for (int i = 0; i < matrix.GetLength(0); i++)
                 {
@@ -67,25 +72,3 @@ namespace Tyuiu.BukinTK.Sprint6.Task7.V9.Lib
         }
     }
 }
-
-//[[16, -15, -14, -16, -9, -10, -17, 12, -20, -12],
-//[7, 20, -16, 13, 19, 15, -13, -4, 9, 18],
-//[-4,18,8,9,-3,14,-17,18,-12,-11],
-//[-13,5,7,-13,2,-9,19,19,-16,1],
-//[12, 7, 7, -6, 11, -7, 17, -8, -11, -4],
-//[-8,-16,-13,-16,3,-3,-13,20,-15,6],
-//[11, 18, -17, -5, -14, 18, 5, 9, -4, -17],
-//[6, 9, 18, 14, 15, -4, 3, -7, -18, 14],
-//[3, 5, 11, 15, -17, 8, 9, -1, 11, 19],
-//[11, -20, 17, 12, 16, 13, -15, 3, 16, 7]]
-
-//[[16, -15, -14, -16, -9, -10, -17, 12, -20, -12],
-//[7, 20, -16, 13, 19, 15, -13, -4, 9, 18],
-//[-4,18,8,9,-3,14,-17,18,-12,-11],
-//[-13,5,2,-13,2,-9,19,19,-16,1],
-//[12, 7, 5, -6, 11, -7, 17, -8, -11, -4],
-//[-8,-16,-13,-16,3,-3,-13,20,-15,6],
-//[11, 18, -17, -5, -14, 18, 5, 9, -4, -17],
-//[6, 9, 18, 14, 15, -4, 3, -7, -18, 14],
-//[3, 5, 11, 15, -17, 8, 9, -1, 11, 19],
-//[11, -20, 17, 12, 16, 13, -15, 3, 16, 7]]
