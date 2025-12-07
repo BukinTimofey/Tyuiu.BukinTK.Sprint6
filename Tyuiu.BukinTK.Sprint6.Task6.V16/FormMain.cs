@@ -1,3 +1,5 @@
+using Tyuiu.BukinTK.Sprint6.Task6.V16.Lib;
+
 namespace Tyuiu.BukinTK.Sprint6.Task6.V16
 {
     public partial class FormMain : Form
@@ -6,5 +8,8 @@ namespace Tyuiu.BukinTK.Sprint6.Task6.V16
         {
             InitializeComponent();
         }
+
+        DataService ds = new DataService();
+        string filePath = "";
     }
 }
